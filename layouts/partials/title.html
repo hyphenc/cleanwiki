@@ -7,9 +7,9 @@
 {{ if .Title }}
   {{ $title = .Title }}
 {{ else if and .IsSection .File }}
-  {{ $title = path.Base .File.Dir | humanize | title }}
+  {{ $title = path.Base .File.Dir | humanize }}
 {{ else if and .IsPage .File }}
-  {{ $title = .File.BaseFileName | humanize | title }}
+  {{ $title = .File.BaseFileName | humanize }}
 {{ end }}
 
-{{ return $title }}
+{{ return lower $title }}

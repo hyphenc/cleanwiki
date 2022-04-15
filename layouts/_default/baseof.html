@@ -1,8 +1,8 @@
 <!DOCTYPE html>
 <html lang="{{ default .Site.Language.Lang .Site.LanguageCode  }}" dir="{{ default "ltr" .Site.Language.LanguageDirection }}">
 <head>
-  {{ partial "docs/html-head" . }}
-  {{ partial "docs/inject/head" . }}
+  {{ partial "html-head" . }}
+  {{ partial "inject/head" . }}
 </head>
 <body dir="{{ default "ltr" .Site.Language.LanguageDirection }}">
   <input type="checkbox" class="hidden toggle" id="menu-control" />
@@ -19,16 +19,14 @@
         {{ template "header" . }} <!-- Mobile layout header -->
       </header>
 
-      {{ partial "docs/inject/content-before" . }}
+      {{ partial "inject/content-before" . }}
       {{ template "main" . }} <!-- Page Content -->
-      {{ partial "docs/inject/content-after" . }}
+      {{ partial "inject/content-after" . }}
 
       <footer class="book-footer">
         {{ template "footer" . }} <!-- Footer under page content -->
-        {{ partial "docs/inject/footer" . }}
+        {{ partial "inject/footer" . }}
       </footer>
-
-      {{ template "comments" . }} <!-- Comments block -->
 
       <label for="menu-control" class="hidden book-menu-overlay"></label>
     </div>
@@ -42,16 +40,16 @@
     {{ end }}
   </main>
 
-  {{ partial "docs/inject/body" . }}
+  {{ partial "inject/body" . }}
 </body>
 </html>
 
 {{ define "menu" }}
-  {{ partial "docs/menu" . }}
+  {{ partial "menu" . }}
 {{ end }}
 
 {{ define "header" }}
-  {{ partial "docs/header" . }}
+  {{ partial "header" . }}
 
   {{ if default true (default .Site.Params.BookToC .Params.BookToC) }}
   <aside class="hidden clearfix">
@@ -61,15 +59,7 @@
 {{ end }}
 
 {{ define "footer" }}
-  {{ partial "docs/footer" . }}
-{{ end }}
-
-{{ define "comments" }}
-  {{ if and .Content (default true (default .Site.Params.BookComments .Params.BookComments)) }}
-  <div class="book-comments">
-    {{- partial "docs/comments" . -}}
-  </div>
-  {{ end }}
+  {{ partial "footer" . }}
 {{ end }}
 
 {{ define "main" }}
@@ -79,5 +69,5 @@
 {{ end }}
 
 {{ define "toc" }}
-  {{ partial "docs/toc" . }}
+  {{ partial "toc" . }}
 {{ end }}
