@@ -4,9 +4,9 @@
   <div>
     {{- $date := partial "date" (dict "Date" .GitInfo.AuthorDate.Local "Format" .Site.Params.BookDateFormat) -}}
     {{- $commitPath := default "commit" .Site.Params.BookCommitPath -}}
-    <a class="flex align-center" href="{{ .Site.Params.BookRepo }}/{{ $commitPath }}/{{ .GitInfo.Hash }}" title='"last modified by" {{ .GitInfo.AuthorName }} | {{ $date }}' target="_blank" rel="noopener">
+    <a class="flex align-center" href="{{ .Site.Params.BookRepo }}/{{ $commitPath }}/{{ .GitInfo.Hash }}" title='{{ "last modified by" }} {{ .GitInfo.AuthorName }} | {{ $date }}' target="_blank" rel="noopener">
       <img src="{{ "svg/calendar.svg" | relURL }}" class="book-icon" alt="Calendar" />
-      <span>last modified: {{ $date }}</span>
+      <span>{{ $date }}</span>
     </a>
   </div>
 {{ end }}
