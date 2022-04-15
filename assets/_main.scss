@@ -329,6 +329,10 @@ body[dir="rtl"] .book-menu {
       left: 0;
       right: 0;
     }
+
+    .markdown > h1 {
+      display: none;
+    }
   }
 
   #toc-control:focus ~ main label[for="toc-control"] {
