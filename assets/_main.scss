@@ -38,10 +38,6 @@ img {
   vertical-align: baseline;
 }
 
-:focus {
-  @include outline;
-}
-
 aside nav ul {
   padding: 0;
   margin: 0;
@@ -301,10 +297,6 @@ body[dir="rtl"] .book-menu {
 
   .book-header {
     display: block;
-  }
-
-  #menu-control:focus ~ main label[for="menu-control"] {
-    @include outline;
   }
 
   #menu-control:checked ~ main {
