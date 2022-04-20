@@ -201,3 +201,6 @@ If you are using `config.yaml` or `config.json`, consult the [configuration mark
 
 [Extra credits to hugo-book contributors](https://github.com/alex-shpak/hugo-book/graphs/contributors)
 
+copyright for portions of this project are held by Alex Shpak, 2018 as part of
+their project [hugo-book](https://github.com/alex-shpak/hugo-book). all copyright later than commit `98d19b8e95019534622fd4c5eae707423730df2c`, except patches merged from upstream is held by me under the MIT License, see LICENSE file.
+
