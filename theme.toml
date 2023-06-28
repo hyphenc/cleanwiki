@@ -3,13 +3,13 @@
 
 name = "cleanwiki"
 license = "MIT"
-licenselink = "https://github.com/hyphenc/cleanwiki/blob/master/LICENSE"
+licenselink = "https://github.com/nunq/cleanwiki/blob/master/LICENSE"
 description = "hugo-book fork that aims to be leaner"
-homepage = "https://github.com/hyphenc/cleanwiki"
+homepage = "https://github.com/nunq/cleanwiki"
 tags = ["responsive", "clean", "documentation", "docs", "flexbox", "search", "mobile"]
 features = []
 min_version = "0.68"
 
 [author]
-  name = "hyphenc"
+  name = "nunq"
   homepage = "https://nunq.net"

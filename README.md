@@ -39,7 +39,7 @@ this is a fork of [hugo-book](https://github.com/alex-shpak/hugo-book) which aim
 Navigate to your hugo project root and run:
 
 ```
-git submodule add https://github.com/hyphenc/cleanwiki themes/cleanwiki
+git submodule add https://github.com/nunq/cleanwiki themes/cleanwiki
 ```
 
 ## Menu
